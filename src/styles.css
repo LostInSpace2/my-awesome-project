@@ -1,0 +1,163 @@
+h1 {
+	color: #ff3366;
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	margin-bottom: 22px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+h2 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 500;
+	font-size: 1.325rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	display: block;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#tempDetails {
+	padding-left: 5px;
+}
+
+.container {
+	margin-top: 20px;
+	max-width: 450px;
+}
+
+.weatherPage {
+	border: 2.5px solid #ff3366;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#rowFirst {
+	margin: auto;
+}
+
+.input-group {
+	margin: auto;
+	top: -10px;
+}
+
+.form-control {
+	border: 2.5px solid #ff3366;
+	margin: auto;
+	display: inline;
+	padding: 3px 6px 3px 6px;
+}
+
+.col-6 {
+	background-color: white;
+	padding: 5px;
+}
+
+.col-3 {
+	background-color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+#city-input,
+#city-search,
+#locate-button {
+	font-size: 13.5px;
+	line-height: 23px;
+}
+
+#city-search,
+#locate-button {
+	background-color: #ff3366;
+	color: white;
+	font-weight: 500;
+}
+
+.main {
+	margin: 10px;
+	font-size: 13px;
+}
+
+.colN1 {
+	flex: 0 0 auto;
+	width: 58%;
+}
+
+.colN2 {
+	flex: 0 0 auto;
+	width: 42%;
+	padding-right: 0;
+}
+
+.currentCity {
+	color: #ff3366;
+}
+
+.p1 {
+	padding: 0;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#partly-cloudy {
+	height: 64px;
+	width: 64px;
+	margin-right: 10px;
+	float: left !important;
+}
+
+.float-left {
+	float: left !important;
+}
+
+#currentTempText {
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.currentTempDetails {
+	vertical-align: middle;
+	margin: 0 auto;
+	margin-top: 8px;
+	text-align: left;
+}
+
+.weatherForecast {
+	text-align: center;
+	color: #ff3366;
+	margin-top: 35px;
+}
+
+.col-2 {
+	padding: 0;
+}
+
+#card-text-1 {
+	font-weight: bold;
+	font-size: smaller;
+}
+
+#card-text-2 {
+	margin-top: -17px;
+	font-size: smaller;
+}
+
+#img-day {
+	vertical-align: middle;
+	width: 42px;
+}
