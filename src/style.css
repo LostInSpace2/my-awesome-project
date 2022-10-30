@@ -162,3 +162,10 @@ a {
 	vertical-align: middle;
 	width: 42px;
 }
+
+.gitHubLink {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+}
