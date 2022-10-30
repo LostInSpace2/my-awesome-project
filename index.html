@@ -1,143 +1,185 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SheCode Plus - Week 5 Homework</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6af2a18e2b.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
-  </head>
+	<head>
+		<title>SheCode Plus - Week 6</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/6af2a18e2b.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+		<link href="src/styles.css" rel="stylesheet" type="text/css" />
+	</head>
 
-  <body>
-    <div class="container">
-      <div class="weatherPage">
-        <h1>
-          Local Daily Weather
-        </h1>
-        <form id="city-form">
-          <div class="input-group">
-            <div class="row" id="rowFirst">
-              <div class="col-6"  id="searchButton">
-                  <input
-                  type="search"
-                  class="form-control"
-                  placeholder="Enter a city"
-                  id="city-input"
-                />
-              </div>
-              <div class="col-3" id="submitButton">
-                  <input
-                  type="submit"
-                  value="Search"
-                  class="form-control"
-                  id="city-search"
-                />
-              </div>
-              <div class="col-3" id="locateButton">
-                <input
-                type="button"
-                value="Locate"
-                class="form-control"
-                id="locate-button"
-              />
-            </div>
-            </div>
-          </div>
-        </form>
-        <div class="main">
-          <div class="currentCity">
-            <h2 id="cityName">
-              Rishon LeZion
-            </h2>
-            <ul class="p1">
-              <li id="date"></li>
-              <li id="weatherDescription">
-                Partly cloudy
-              </li>
-            </ul>
-            <div class="row">
-              <div class="colN1">
-                <div class="clearfix">
-                  <img id="partly-cloudy" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Sun Cloudy">
-                  <div class="float-left">
-                    <span id="currentTempText">
-                     28
-                    </span>
-                    <span class="units">
-                      <a href="#" id="celsius-link">°C</a> | 
-                      <a href="#" id="fahrenheit-link">°F</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="colN2">
-                <div class="currentTempDetails">
-                  <ul id="tempDetails">
-                    <li id="feelsLike">Feels like: 28°C</li>
-                    <li id="humidity">Humidity: 67%</li>
-                    <li id="wind">Wind: 14 km/h</li>
-                  </ul>  
-                </div>
-              </div>  
-            </div>
-          </div>
-        </div>
-        <div class="weatherForecast">
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="card-title">Sun</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Sun Cloudy">
-                    <p id="card-text-1">31°C</p>
-                    <p id="card-text-2">24°C</p>
-                </div>
-                <div class="col-2">
-                    <h3 class="card-title">Mon</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Sun Cloudy">
-                    <p id="card-text-1">32°C</p>
-                    <p id="card-text-2">24°C</p>
-                </div>
-                <div class="col-2">
-                    <h3 class="card-title">Tue</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="Sunny">
-                    <p id="card-text-1">32°C</p>
-                    <p id="card-text-2">24°C</p>
-                </div>
-                <div class="col-2">
-                    <h3 class="card-title">Wed</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="Sunny">
-                    <p id="card-text-1">32°C</p>
-                    <p id="card-text-2">25°C</p>
-                </div>
-                <div class="col-2">
-                    <h3 class="card-title">Thu</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="Sunny">
-                    <p id="card-text-1">32°C</p>
-                    <p id="card-text-2">24°C</p>
-                </div>
-                <div class="col-2">
-                    <h3 class="card-title">Fri</h3>
-                    <img id="img-day" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Sun Cloudy">
-                    <p id="card-text-1">31°C</p>
-                    <p id="card-text-2">24°C</p>
-              </div>
-            </div> 
-        </div> 
-     </div>
-     <script src="src/script.js"></script>
-  </body>
+	<body>
+		<div class="container">
+			<div class="weatherPage">
+				<h1>
+					Local Daily Weather
+				</h1>
+				<form id="city-form">
+					<div class="input-group">
+						<div class="row" id="rowFirst">
+							<div class="col-6" id="searchButton">
+								<input
+									type="search"
+									class="form-control"
+									placeholder="Enter a city"
+									id="city-input"
+								/>
+							</div>
+							<div class="col-3" id="submitButton">
+								<input
+									type="submit"
+									value="Search"
+									class="form-control"
+									id="city-search"
+								/>
+							</div>
+							<div class="col-3" id="locateButton">
+								<input
+									type="button"
+									value="Locate"
+									class="form-control"
+									id="locate-button"
+								/>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="main">
+					<div class="currentCity">
+						<h2 id="cityName">
+							Rishon LeZion
+						</h2>
+						<ul class="p1">
+							<li id="date"></li>
+							<li id="weatherDescription">
+								Partly cloudy
+							</li>
+						</ul>
+						<div class="row">
+							<div class="colN1">
+								<div class="clearfix">
+									<img
+										id="partly-cloudy"
+										src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+										alt="Sun Cloudy"
+									/>
+									<div class="float-left">
+										<span id="currentTempText">
+											28
+										</span>
+										<span class="units">
+											<a href="#" id="celsius-link">°C</a> |
+											<a href="#" id="fahrenheit-link">°F</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="colN2">
+								<div class="currentTempDetails">
+									<ul id="tempDetails">
+										<li id="feelsLike">Feels like: 28°C</li>
+										<li id="humidity">Humidity: 67%</li>
+										<li id="wind">Wind: 14 km/h</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weatherForecast">
+					<div class="row">
+						<div class="col-2">
+							<h3 class="card-title">Sun</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+								alt="Sun Cloudy"
+							/>
+							<p id="card-text-1">31°C</p>
+							<p id="card-text-2">24°C</p>
+						</div>
+						<div class="col-2">
+							<h3 class="card-title">Mon</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+								alt="Sun Cloudy"
+							/>
+							<p id="card-text-1">32°C</p>
+							<p id="card-text-2">24°C</p>
+						</div>
+						<div class="col-2">
+							<h3 class="card-title">Tue</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+								alt="Sunny"
+							/>
+							<p id="card-text-1">32°C</p>
+							<p id="card-text-2">24°C</p>
+						</div>
+						<div class="col-2">
+							<h3 class="card-title">Wed</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+								alt="Sunny"
+							/>
+							<p id="card-text-1">32°C</p>
+							<p id="card-text-2">25°C</p>
+						</div>
+						<div class="col-2">
+							<h3 class="card-title">Thu</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+								alt="Sunny"
+							/>
+							<p id="card-text-1">32°C</p>
+							<p id="card-text-2">24°C</p>
+						</div>
+						<div class="col-2">
+							<h3 class="card-title">Fri</h3>
+							<img
+								id="img-day"
+								src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+								alt="Sun Cloudy"
+							/>
+							<p id="card-text-1">31°C</p>
+							<p id="card-text-2">24°C</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<small>
+				<a
+					href="https://github.com/LostInSpace2/my-awesome-project"
+					target="_blank"
+					>Open-source code</a
+				>, by Shir Rose Aharoni
+			</small>
+		</div>
+		<script src="src/index.js"></script>
+	</body>
 </html>
