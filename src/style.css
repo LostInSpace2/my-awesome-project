@@ -140,7 +140,7 @@ a {
 .weatherForecast {
 	text-align: center;
 	color: #ff3366;
-	margin-top: 35px;
+	margin-top: 23px;
 }
 
 .col-2 {
@@ -154,6 +154,7 @@ a {
 
 #card-text-2 {
 	margin-top: -17px;
+	margin-bottom: 0;
 	font-size: smaller;
 }
 
